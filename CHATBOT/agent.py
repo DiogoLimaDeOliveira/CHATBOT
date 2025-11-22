@@ -12,7 +12,7 @@ load_dotenv()
 if not os.getenv("GOOGLE_API_KEY"):
     os.environ["LLM_PROVIDER"] = "google"
     os.environ["MODEL_NAME"] = "gemini-2.0-flash"
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyDE-Ss-lBJS9ytaQeSd90Z_ESPWkDoZfk8"
+    os.environ["GOOGLE_API_KEY"] = chave
 
 def gerar_resposta_do_vendedor(mensagem_usuario, contexto_do_catalogo):
     """
@@ -28,3 +28,4 @@ def gerar_resposta_do_vendedor(mensagem_usuario, contexto_do_catalogo):
         agent = MangabaAgent()
     except Exception as e:
         return f"Erro ao ligar a IA: {e}"
+
