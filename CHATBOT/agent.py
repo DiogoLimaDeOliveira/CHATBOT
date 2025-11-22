@@ -8,12 +8,7 @@ from utils import carregar_dados
 # Carrega configus
 load_dotenv()
 
-# congifgs da chave
-if not os.getenv("GOOGLE_API_KEY"):
-    os.environ["LLM_PROVIDER"] = "google"
-    os.environ["MODEL_NAME"] = "gemini-2.0-flash"
-    os.environ["GOOGLE_API_KEY"] = chave
-
+# personalidade do bot
 def gerar_resposta_do_vendedor(mensagem_usuario, contexto_do_catalogo):
     """
     Função Mestra da IA.
@@ -28,5 +23,6 @@ def gerar_resposta_do_vendedor(mensagem_usuario, contexto_do_catalogo):
         agent = MangabaAgent()
     except Exception as e:
         return f"Erro ao ligar a IA: {e}"
+
 
 
