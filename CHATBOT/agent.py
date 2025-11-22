@@ -1,6 +1,6 @@
 import os
 from mangaba_ai import MangabaAgent
-from dotenv import load_dotenv
+from dotenv import load_dotenv #procura key nop arquivo env
 
 # importa  função de leitura 
 from utils import carregar_dados
@@ -28,4 +28,5 @@ def gerar_resposta_do_vendedor(mensagem_usuario, contexto_do_catalogo):
         agent = MangabaAgent()
     except Exception as e:
         return f"Erro ao ligar a IA: {e}"
+
 
