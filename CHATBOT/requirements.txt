@@ -5,3 +5,4 @@ pandas
 mangaba_ai
 python-dotenv
 google-generativeai
+tabulate
